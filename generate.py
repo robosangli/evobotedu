@@ -8,5 +8,8 @@ pyrosim.Start_SDF("box.sdf")            # information of world being created wil
 length = 1
 width = 2
 height = 3
-pyrosim.Send_Cube(name="Box", pos=[0,0,0.5] , size=[length,width,height])     # stores box's initial position and dimensions into 'box.sdf'
+x = 0
+y = 0
+z = height/2.0                          # ensure that the bottom surface is right at ground level (& not embedded into the floor)
+pyrosim.Send_Cube(name="Box", pos=[x,y,z] , size=[length,width,height])     # stores box's initial position and dimensions into 'box.sdf'
 pyrosim.End()                           # closes the sdf file
