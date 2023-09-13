@@ -5,5 +5,8 @@ import pyrosim.pyrosim as pyrosim       # Python Robot Simulator package communi
 
 pyrosim.Start_SDF("box.sdf")            # information of world being created will be stored in 'box.sdf'
 # Note: SDF stands for Software Development Folder
-pyrosim.Send_Cube(name="Box", pos=[0,0,0.5] , size=[1,1,1])     # stores box's initial position and dimensions into 'box.sdf'
+length = 1
+width = 2
+height = 3
+pyrosim.Send_Cube(name="Box", pos=[0,0,0.5] , size=[length,width,height])     # stores box's initial position and dimensions into 'box.sdf'
 pyrosim.End()                           # closes the sdf file
