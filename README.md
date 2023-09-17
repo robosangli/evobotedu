@@ -9,3 +9,4 @@ Pybullet is a physics engine that simulates physics by
     1. Applying forces to each link in the world
     2. Updating its acceleration based on the forces that are acting on it using F = ma
     3. Updating the new position and orientation of each link using its new acceleration
+The force of gravity & a floor surface are added to the simulated world. Note that Pybullet applies temporary forces on links to "resolve" illegal collisions: links are not allowed to interpenetrate one another. So if Pybullet detects a block coming in contact with the floor, a temporary upward force is applied until the block is no longer in contact with the floor. By playing with the link position variables multiple links are procedurally generated (nested for-loops). 25 towers of 10 blocks each are created.
